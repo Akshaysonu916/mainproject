@@ -1,0 +1,74 @@
+{% extends "home.html" %} 
+{% block content %} 
+{% include "navbar.html" %}
+
+<div class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://t3.ftcdn.net/jpg/05/35/47/38/360_F_535473874_OWCa2ohzXXNZgqnlzF9QETsnbrSO9pFS.jpg');">
+  <div class='max-w-md w-full p-11 rounded-xl bg-gradient-to-r  bg-opacity-90 shadow-xl transform transition-all hover:scale-105'>
+      <form class="space-y-6" action="#" method="POST">
+          {% csrf_token %} 
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-100">Email address</label>
+          <div class="mt-2">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-pink-500 sm:text-sm"
+            />
+          </div>
+        </div>
+        
+        <div>
+          <label for="username" class="block text-sm font-medium text-gray-100">Username</label>
+          <div class="mt-2">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              required
+              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-pink-500 sm:text-sm"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-100">Password</label>
+          <div class="mt-2">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-pink-500 sm:text-sm"
+            />
+          </div>
+        </div>
+        
+        <div>
+          <label for="confirm_password" class="block text-sm font-medium text-gray-100">Confirm Password</label>
+          <div class="mt-2">
+            <input
+              type="password"
+              name="confirm_password"
+              id="confirm_password"
+              required
+              class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-pink-500 sm:text-sm"
+            />
+          </div>
+        </div>
+
+        <div>
+          
+          <button 
+            type="submit"
+            class="flex w-full justify-center rounded-md bg-gradient-to-r from-blue-500 to-blue-600 px-3 py-1.5 text-sm font-semibold text-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
+</div>
+
+{% endblock content %}
